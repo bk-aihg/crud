@@ -1,0 +1,24 @@
+api_crafting_get:
+    path:       /api/crafting/{itemId?}
+    controller: App\Controller\CraftingApiController::getCraftingItems
+    methods:    [GET]
+
+api_crafting_addItem:
+    path:       /api/crafting
+    controller: App\Controller\CraftingApiController::addCraftingItem
+    methods:    [POST]
+
+api_blog_get:
+    path:       /api/blog
+    controller: App\Controller\BlogApiController::getBlog
+    methods:    [GET]
+
+api_blog_addItem:
+    path:       /api/blog
+    controller: App\Controller\BlogApiController::addBlog
+    methods:    [POST]
+
+api_blog_addComments:
+    path:       /api/blog/{blogId}/comments
+    controller: App\Controller\BlogApiController::addComments
+    methods:    [POST]
