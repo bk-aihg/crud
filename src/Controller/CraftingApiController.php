@@ -57,7 +57,6 @@ class CraftingApiController extends AbstractController
     public function toJson($result){       
         $serializer = $this->container->get('serializer')
             ->normalize($result, 'json');
-        
         return json_decode(json_encode($serializer)); 
 
     }

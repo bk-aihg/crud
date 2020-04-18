@@ -33,7 +33,7 @@ class BlogApiController extends AbstractController
     public function addBlog(Request $request, DocumentManager $dm)
     {
         $data = json_decode($request->getContent(), true);
-        $date = date('Y/m/d H:i:s');
+        $date = date("M-d-y H-i");
         $data['date'] = $date;
         $blogId = uniqid();
  
@@ -53,7 +53,7 @@ class BlogApiController extends AbstractController
     public function addComments(Request $request, $blogId, DocumentManager $dm)
     {
         $data = json_decode($request->getContent(), true);
-        $date = date('Y/m/d H:i:s');
+        $date = date("M-d-y H-i");
         $data['date'] = $date;
         
         $serializer = SerializerBuilder::create()->build();

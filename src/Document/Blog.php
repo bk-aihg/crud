@@ -33,7 +33,7 @@ class Blog
     protected $description;
 
     /**
-     * @MongoDB\Field(type="date")
+     * @MongoDB\Field(type="string")
      */
     protected $date;
 
